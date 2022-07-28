@@ -7,4 +7,4 @@
 +	Практически всё написано на чистом JS, взял только библиотеку just validate, для валидации форм.
 +	Сделан полный адаптив до 375px.
 
-### Ссылка на сайт - https://dmytryjk.github.io/Clean%20Home/index.html
+### <a href="https://dmytryjk.github.io/Clean%20Home/index.html">Ссылка на сайт</a>
