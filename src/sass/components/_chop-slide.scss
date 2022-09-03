@@ -1,0 +1,25 @@
+.chop-slide {
+	position: relative;
+	margin-top: 150px;
+	width: 100%;
+	min-height: 754px;
+	background-color: $main-color;
+	padding: 199px 255px;
+	display: flex;
+	align-items: center;
+	&__title {
+		font-family: $font;
+		font-weight: 300;
+		font-size: 40px;
+		line-height: 55px;
+		text-align: center;
+		color: #FFFFFF;
+		max-width: 1219px;
+		margin: 0 auto;
+	}
+	&__img {
+		position: absolute;
+		bottom: 62px;
+		right: 75px;
+	}
+}

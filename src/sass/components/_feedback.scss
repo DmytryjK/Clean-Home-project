@@ -1,0 +1,101 @@
+.feedback {
+	padding-top: 185px;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__text-block {
+		max-width: 610px;
+	}
+	&__title {
+		@include font-title;
+		padding-right: 170px;
+	}
+	&__descr {
+		@include font-descr;
+		margin-top: 50px;
+		max-width: 510px;
+		padding-right: 70px;
+	}
+	&__form {
+		width: 701px;
+		min-height: 650px;
+		&-item {
+			position: relative;
+			width: 100%;
+			border: 1px solid $main-color;
+			min-height: 200px;
+			padding: 40px 40px 95px 40px;
+			&:nth-child(n+2) {
+				margin-top: 15px;
+			}
+		}
+		&-text {
+			font-family: $font;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 27px;
+			color: $text-color;
+		}
+		&-rating {
+			position: absolute;
+			font-family: $font;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 27px;
+			color: $main-color;
+			bottom: 38px;
+			&:before {
+				content: '\2605';
+				color: $main-color;
+				font-size: 24px;
+				padding-right: 5px;
+			}
+			span {
+				color: $second-color;
+				padding-left: 10px;
+				&:before {
+					content: '\002F';
+					padding-right: 10px;
+					color: $main-color;
+				}
+			}
+		}
+	}
+	&__send-link {
+		display: inline-block;
+		margin-top: 50px;
+		padding: 22px 60px;
+		background: $main-color;
+		border-radius: 20px;
+		font-family: $font;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 27px;
+		text-decoration: none;
+		color: white;
+		transition: 0.3s all;
+		&:hover {
+			color: white;
+			background: #4FB1A7;
+		}
+	}
+	&__more-link {
+		display: inline-block;
+		margin-top: 75px;
+		padding: 22px 60px;
+		border: 1px solid #49A399;
+		border-radius: 20px;
+		font-family: $font;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 27px;
+		text-decoration: none;
+		color: $main-color;
+		transition: 0.3s all;
+		&:hover {
+			color: white;
+			background: #4FB1A7;
+		}
+	}
+}

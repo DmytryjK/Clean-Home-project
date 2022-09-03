@@ -1,0 +1,34 @@
+@import 'lib/bootstrap-reboot.min';
+
+@import 'base/mixins';
+@import 'base/variables';
+
+.container {
+	position: relative;
+	max-width: 1268px;
+	margin: 0 auto;
+}
+
+.container__img {
+	max-width: 1728px;
+	position: relative;
+	margin: 0 auto;
+}
+@import 'components/btns';
+@import 'components/header';
+@import 'components/mainpage';
+@import 'components/benefits';
+@import 'components/prices';
+@import 'components/how-we-clean';
+@import 'components/navigation';
+@import 'components/service';
+@import 'components/more-service';
+@import 'components/promo';
+@import 'components/about-us';
+@import 'components/chop-slide';
+@import 'components/discount';
+@import 'components/feedback';
+@import 'components/footer';
+@import 'components/feedback-page';
+@import 'components/pop-up';
+@import 'components/media';

@@ -1,0 +1,34 @@
+.main__page {
+	padding-top: 178px;
+	padding-bottom: 445px;
+		&-bg {
+		position: absolute;
+		top: -179px;
+		right: 0;
+		max-width: 847px;
+		z-index: -1;
+	}
+	&-inner {
+		width: 701px;
+		display: inline-block;
+		font: $font;
+		p {
+			margin-top: 50px;
+			width: 600px;
+			@include font-descr;
+		}
+		&__title {
+			color: $main-color;
+			font-family: $font;
+			font-weight: 700;
+			font-size: 70px;
+			line-height: 109px;
+			span {
+				color: $second-color;
+			}
+		}
+	}
+	.main__page_adaptive {
+		display: none;
+	}
+}

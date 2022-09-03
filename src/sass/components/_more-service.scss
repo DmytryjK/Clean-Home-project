@@ -1,0 +1,31 @@
+.more-service {
+	margin-top: 180px;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left {
+		max-width: 541px;
+	}
+	&__title {
+		@include font-title;
+	}
+	&__table {
+		margin-top: 45px;
+		width: 702px;
+		min-height: 539px;
+		border-top: 1px solid $main-color;
+		@include font-descr;
+		.first-column {
+			border-bottom: 1px solid $main-color;
+			text-align: left;
+		}
+		.second-column {
+			border-bottom: 1px solid $main-color;
+			text-align: right;
+		}
+	}
+	.more-service__btn-adaptation {
+		display: none;
+	}
+}

@@ -1,0 +1,232 @@
+.how-we-clean {
+	margin-top: 170px;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		@include font-title;
+		width: 622px;
+	}
+	&__descr {
+		@include font-descr;
+		width: 702px;
+		margin-top: 35px;
+	}
+	&__image{
+		height: 802px;
+		position: relative;
+		margin-top: 100px;
+	}
+	&__image-kitchen {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('../images/kitchen.jpg') center center/cover no-repeat;
+		height: 100%;
+		width: 100%;
+		opacity: 0%;
+	}
+	&__image-bathroom {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('../images/bathroom.jpg') center center/cover no-repeat;
+		height: 100%;
+		width: 100%;
+		opacity: 0%;
+	}
+	&__image-room {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('../images/room.jpg') center center/cover no-repeat;
+		height: 100%;
+		width: 100%;
+		opacity: 0%;
+	}
+	&__image-livingroom {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('../images/livingroom.jpg') center center/cover no-repeat;
+		height: 100%;
+		width: 100%;
+		opacity: 0%;
+	}
+}
+
+.how-we-clean-active {
+	transition: 0.8s ease-out all;
+	opacity: 100%;
+}
+.how-we-clean__adaptation-block {
+	display: none;
+}
+
+//Notifications//
+
+.image__nav-block {
+	position: absolute;
+	height: 113px;
+	z-index: 1;
+	&_kitchen1 {
+		top: 5%;
+		right: 25%;
+	}
+	&_kitchen2 {
+		top: 10%;
+		right: 5%;
+	}
+	&_kitchen3 {
+		top: 46%;
+		right: 27%;
+	}
+	&_kitchen4 {
+		top: 50%;
+		right: 50%;
+	}
+	&_kitchen5 {
+		top: 70%;
+		right: 5%;
+	}
+	&_bathroom1 {
+		top: 25%;
+		right: 5%;
+	}
+	&_bathroom2 {
+		top: 61%;
+		right: 45%;
+	}
+	&_bathroom3 {
+		top: 60%;
+		right: 20%;
+	}
+	&_bathroom4 {
+		top: 80%;
+		right: 20%;
+	}
+	&_room1 {
+		top: 51%;
+		right: 71%;
+	}
+	&_room2 {
+		top: 56%;
+		right: 30%;
+	}
+	&_room3 {
+		top: 74%;
+		right: 2%;
+	}
+	&_room4 {
+		top: 80%;
+		right: 84%;
+	}
+	&_livingroom1 {
+		top: 30%;
+		right: 20%;
+	}
+	&_livingroom2 {
+		top: 65%;
+		right: 35%;
+	}
+	&_livingroom3 {
+		top: 68%;
+		right: 68%;
+	}
+}
+.image-button {
+	display: block;
+	margin: 0 auto;
+	background: url('../icons/plus.svg') bottom center/cover no-repeat;
+	width: 36px;
+	height: 36px;
+	border: none;
+	border-radius: 100%;
+	transition: 0.3s all;
+	outline: none;
+	position: relative;
+	&_active {
+		transform: rotate(-45deg);
+	}
+	&:hover {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			border-radius: 100%;
+			animation-name: image-button_before;
+			animation-duration: 0.4s;
+			animation-timing-function: ease-in-out;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			border-radius: 100%;
+			animation-name: image-button_after;
+			animation-duration: 0.4s;
+			animation-timing-function: ease-in-out;
+		}
+	}
+	
+}
+.image-descr {
+	min-height: 53px;
+	padding: 0 25px;
+	background-color: #fff;
+	font-family: $font;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: center;
+	color: $second-color;
+	padding-top: 17px;
+	padding-bottom: 16px;
+	border: none;
+	border-radius: 10px;
+	transition: 0.5s all;
+	overflow: hidden;
+	opacity: 0%;
+	&_active {
+		opacity: 100%;
+		overflow: visible;
+	}
+}	
+
+
+@keyframes image-button_before {
+	0% {
+		height: 36px;
+		width: 36px;
+		opacity: 100%;
+		border: 1px solid $main-color;
+	}
+	100% {
+		height: 44px;
+		width: 44px;
+		opacity: 0;
+		border: 1px solid $main-color;
+	}
+}
+
+@keyframes image-button_after {
+	0% {
+		height: 42px;
+		width: 42px;
+		opacity: 100%;
+		border: 1px solid $main-color;
+	}
+	100% {
+		height: 52px;
+		width: 52px;
+		opacity: 0;
+		border: 1px solid $main-color;
+	}
+}
