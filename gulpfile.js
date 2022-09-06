@@ -5,7 +5,7 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
+// const htmlmin = require('gulp-htmlmin');
 
 
 gulp.task('server', function() {
@@ -41,13 +41,13 @@ gulp.task('watch', function() {
 
 gulp.task('html', function() {
     return gulp.src("src/*.html")
-        .pipe(htmlmin({ collapseWhitespace: true }))
+        // .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("dist/"));
 });
 
 gulp.task('scripts', function() {
     return gulp.src("src/js/**/*.js")
-        .pipe(gulp.dest("dist/js"));
+        // .pipe(gulp.dest("dist/js"));
 });
 
 gulp.task('fonts', function() {
@@ -67,4 +67,4 @@ gulp.task('images', function() {
         .pipe(gulp.dest("dist/images"));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'scripts', 'fonts', 'icons', 'images'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'fonts', 'icons', 'images'));
