@@ -4,6 +4,7 @@ function accordion() {
 		e.addEventListener('click', () => {
 			e.classList.toggle('about-us__accordion-btn_active');
 			let text = e.nextElementSibling;
+
 			if (text.style.maxHeight) {
 				text.style.maxHeight = null;
 				text.classList.remove('about-us__accordion-text_active');
@@ -11,6 +12,7 @@ function accordion() {
 				text.style.maxHeight = text.scrollHeight + "px";
 				text.classList.add('about-us__accordion-text_active');
 			}
+			
 		});
 	});
 }
