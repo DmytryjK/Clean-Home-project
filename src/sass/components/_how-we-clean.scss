@@ -7,6 +7,11 @@
 	&__title {
 		@include font-title;
 		width: 622px;
+		visibility: hidden;
+		opacity: 0;
+		&_animation {
+			animation: move-text-how 600ms ease-in-out forwards;
+		}
 	}
 	&__descr {
 		@include font-descr;
@@ -17,6 +22,11 @@
 		height: 802px;
 		position: relative;
 		margin-top: 100px;
+		visibility: hidden;
+		opacity: 0;
+		&_animation {
+			animation: move-cards-how 600ms ease-in-out forwards 300ms;
+		}
 	}
 	&__image-kitchen {
 		position: absolute;
@@ -228,5 +238,29 @@
 		width: 52px;
 		opacity: 0;
 		border: 1px solid $main-color;
+	}
+}
+
+@keyframes move-text-how {
+	0% {
+		visibility: hidden;
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes move-cards-how {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
 	}
 }

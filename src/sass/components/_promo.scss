@@ -1,8 +1,14 @@
 .promotion {
+	overflow: hidden;
 	margin-top: 180px; 
 	&__title {
 		@include font-title;
 		width: 703px;
+		opacity: 0;
+		visibility: hidden;
+		&_animation {
+			animation: move-text-promo 600ms ease-in-out forwards;
+		}
 	}
 	&__carousel {
 		margin-top: 80px;
@@ -125,3 +131,17 @@
 		}
 	}
 }
+
+@keyframes move-text-promo {
+	0% {
+		visibility: hidden;
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+

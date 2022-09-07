@@ -9,57 +9,16 @@ function slider() {
 
     let Circles;
     let counter = 0;
-
+	
 	checkWindowSize();
-
 	const promoCircles = document.querySelectorAll('.promotion__circles-item');
-
 	circles(counter);
 
-	nextBtn.addEventListener('click', () => {
-		nextSlide();
-		prevBtnStyle.style.stroke = '#151515';
-		if (window.screen.width > 988) {
-			if(counter >= images.length / 2) {
-				images.forEach(e => {
-					e.style.transform = 'translateX(0)';
-				})
-				counter = -1;
-				prevBtnStyle.style.stroke = '';
-			} 
-			counter ++;
-			circles(counter);
-		} else {
-			if(counter > images.length / 2) {
-				images.forEach(e => {
-					e.style.transform = 'translateX(0)';
-				})
-				counter = -1;
-				prevBtnStyle.style.stroke = '';
-			} 
-			counter ++;
-			circles(counter);
-		}
-	})
+	let nextSlideInterval = setInterval(nextSlideAnimation, 5000);
+	
+	nextBtn.addEventListener('click', nextSlideAnimation);
 
-	prevBtn.addEventListener('click', () => {
-		prevSlide();
-		
-		if(counter <= 0) {
-			images.forEach(e => {
-				e.style.transform = 'translateX(0)';
-			})
-			counter = 1;
-		}
-		counter --;
-
-		if (counter === 0) {
-			prevBtnStyle.style.stroke = '#C3C3C3';
-		}
-		circles(counter);
-	})
-
-
+	prevBtn.addEventListener('click', prevSlideAnimation);
 
 	function checkWindowSize() {
 		if (window.screen.width > 988) {
@@ -116,17 +75,62 @@ function slider() {
 		})
 	}
 
-    function prevSlide() {
-        images.forEach(e => {
-            e.style.transform += `translateX(calc(100% + ${window.getComputedStyle(e).getPropertyValue("margin-right")}))`;
-        })
-    }
-
-    function nextSlide() {
-        images.forEach(e => {
+	function nextSlideAnimation() {
+		if (event !== undefined) {
+			clearInterval(nextSlideInterval);
+		}
+		
+		images.forEach(e => {
             e.style.transform += `translateX(calc(-100% - ${window.getComputedStyle(e).getPropertyValue("margin-right")}))`;
         });
+
+		prevBtnStyle.style.stroke = '#151515';
+		if (window.screen.width > 988) {
+			if(counter >= images.length / 2) {
+				images.forEach(e => {
+					e.style.transform = 'translateX(0)';
+				})
+				counter = -1;
+				prevBtnStyle.style.stroke = '';
+			} 
+			counter ++;
+			circles(counter);
+		} else {
+			if(counter > images.length / 2) {
+				images.forEach(e => {
+					e.style.transform = 'translateX(0)';
+				})
+				counter = -1;
+				prevBtnStyle.style.stroke = '';
+			} 
+			counter ++;
+			circles(counter);
+		}
+	}
+
+    function prevSlideAnimation() {
+		if (event !== undefined) {
+			clearInterval(nextSlideInterval);
+		}
+
+        images.forEach(e => {
+            e.style.transform += `translateX(calc(100% + ${window.getComputedStyle(e).getPropertyValue("margin-right")}))`;
+        });
+
+		if(counter <= 0) {
+			images.forEach(e => {
+				e.style.transform = 'translateX(0)';
+			})
+			counter = 1;
+		}
+		counter --;
+
+		if (counter === 0) {
+			prevBtnStyle.style.stroke = '#C3C3C3';
+		}
+		circles(counter);
     }
+
 }
 
 export default slider;

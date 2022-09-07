@@ -7,11 +7,13 @@ function forms() {
         formValidate('.discount__form', {tel: { required: true }});
         formValidate('.discount__form-adapt', {tel: { required: true }});
         formValidate('.pop-up-main__form', { number: { required: true }, fio: { required: true }, tel: { required: true }});
-        formValidate('.footer__social-block__form', { email: { required: true, email: true }});
-        formValidate('.footer__social-block__form-adaptive', { email: { required: true, email: true }});
     } else if (document.querySelector('.feedback-page')) {
         formValidate('.feedback-page__send-rightform', {fio: { required: true }, tel: { required: true }});
+        
     }
+    formValidate('.footer__social-block__form', { email: { required: true, email: true }});
+    formValidate('.footer__social-block__form-adaptive', { email: { required: true, email: true }});
+    
 
     function formValidate(selector, rules) {
         new window.JustValidate(selector, {

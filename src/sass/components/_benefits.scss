@@ -1,4 +1,5 @@
 .benefits {
+	overflow: hidden;
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -8,6 +9,8 @@
 	&__content {
 		width: 325px;
 		margin-bottom: 108px;
+		opacity: 0;
+		visibility: hidden;
 		&-icon{
 
 		}
@@ -19,5 +22,21 @@
 			@include font-descr;
 			margin-top: 30px;
 		}
+		&_animation {
+			animation: benefits-content 700ms ease-in-out forwards;
+		}
+	}
+}
+
+@keyframes benefits-content {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
 	}
 }

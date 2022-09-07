@@ -173,10 +173,11 @@
 	&__arrow-up {
 		a {
 			position: absolute;
-			right: 0;
+			right: 0px;
 			bottom: 0;
-			width: 25px;
+			width: 50px;
 			text-align: center;
+			animation: arrow-animate 900ms ease-in-out infinite;
 		}
 		a:hover {
 			path {
@@ -190,5 +191,19 @@
 	}
 	.footer__social-block__subscribe_adaptive {
 		display: none;
+	}
+}
+
+@keyframes arrow-animate {
+	0% {
+		bottom: 10px
+	}
+
+	50% {
+		bottom: 0px
+	}
+
+	100% {
+		bottom: 10px
 	}
 }

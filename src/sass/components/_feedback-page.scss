@@ -7,10 +7,20 @@
     &__title {
         @include font-title;
         max-width: 710px;
+        visibility: hidden;
+        opacity: 0;
+        &_animation {
+            animation: move-title-feedbackpage 500ms ease-in-out forwards;
+        }
     }
     &__rating {
         @include font-descr; 
         line-height: 27px;
+        visibility: hidden;
+        opacity: 0;
+        &_animation {
+            animation: move-rating-feedbackpage 500ms ease-in-out forwards;
+        }
     }
     &__descr {
         margin: 0;
@@ -21,8 +31,9 @@
         display: flex;
         padding: 0;
     }
-// feedback bottom content part
+
     &__content {
+        overflow: hidden;
         margin-top: 80px;
     }
     &__block {
@@ -33,6 +44,11 @@
             max-width: 900px;
             padding: 45px;
             border: 1px solid $main-color;
+            visibility: hidden;
+            opacity: 0;
+            &_animation {
+                animation: move-review-feedbackpage 500ms ease-in-out forwards;
+            }
         }
         &-text {
             @include font-descr; 
@@ -204,4 +220,52 @@
             }
         }
     }
+}
+
+@keyframes move-title-feedbackpage {
+	0% {
+		transform: translateX(-50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes move-rating-feedbackpage {
+	0% {
+		transform: translateX(50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes move-review-feedbackpage {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+        transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+        transform: translateY(0);
+	}
+}
+
+@keyframes move-form-feedbackpage {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
 }

@@ -1,6 +1,7 @@
 .header {
 	padding-top: 53px;
 	padding-bottom: 43px;
+	animation: move-header 700ms ease-in-out forwards;
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -98,5 +99,18 @@
 	}
 	100% {
 		transform: rotate(0);
+	}
+}
+
+@keyframes move-header {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
 	}
 }
