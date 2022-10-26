@@ -191,24 +191,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function humburgerMenu() {
     const hamburger = document.querySelector('.header__hamburger-menu_icon'),
-	hamburgerMenu = document.querySelector('.header__hamburger-menu_nav'),
-	navigationLinks = document.querySelectorAll('.header__hamburger-menu_link');
+	hamburgerMenu = document.querySelector('.hamburger-menu'),
+	navigationLinks = document.querySelectorAll('.hamburger-menu_link'),
+    body = document.querySelector('body'),
+    closeBtn = document.querySelector('.hamburger-menu__close');
 
     hamburger.addEventListener('click', e => {
-        if (hamburgerMenu.classList.contains('header__hamburger-menu_nav-active')) {
-            hamburgerMenu.classList.remove('header__hamburger-menu_nav-active');
+        if (hamburgerMenu.classList.contains('hamburger-menu-active')) {
+            hamburgerMenu.classList.remove('hamburger-menu-active');
             hamburger.classList.remove('header__hamburger-menu_icon-active');
             body.style.overflow = "visible";
         } else {
-            hamburgerMenu.classList.add('header__hamburger-menu_nav-active');
+            hamburgerMenu.classList.add('hamburger-menu-active');
             hamburger.classList.add('header__hamburger-menu_icon-active');
             body.style.overflow = "hidden";
+
+            closeBtn.addEventListener('click', event => {
+                hamburgerMenu.classList.remove('hamburger-menu-active');
+                hamburger.classList.remove('header__hamburger-menu_icon-active');
+                body.style.overflow = "visible";
+            });
         }
     });
 
     navigationLinks.forEach(e => {
         e.addEventListener('click', element => {
-            hamburgerMenu.classList.remove('header__hamburger-menu_nav-active');
+            hamburgerMenu.classList.remove('hamburger-menu-active');
             hamburger.classList.remove('header__hamburger-menu_icon-active');
             body.style.overflow = "visible";
         })
