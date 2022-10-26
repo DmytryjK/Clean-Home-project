@@ -84,10 +84,54 @@
 			}
 		}
 	}
-}
-
-.header__hamburger-menu {
-	display: none;
+	&__hamburger-menu {
+		display: none;
+		order: -1;
+		align-self: center;
+		height: 25px;
+		&_icon {   
+			height: 25px;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			width: 25px;
+			z-index: 999;
+			span {
+				transition: 0.3s ease-in-out all;
+				opacity: 1;
+				display: block;
+				width: 25px;
+				height: 1px;
+				background-color: $second-color;
+				z-index: 999;
+			}
+			&-active {
+				height: 25px;
+				position: fixed;
+				cursor: pointer;
+				width: 25px;
+				z-index: 999;
+				span {
+					position: absolute;
+					top: 50%;
+					background-color: white;
+					z-index: 999;
+					&:first-child{
+						margin-top: 0;
+						transform: rotate(-135deg);
+					}
+					&:last-child {
+						margin-top: 0;
+						transform: rotate(135deg);
+					}
+					&:nth-child(2) {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 @keyframes header__phone {

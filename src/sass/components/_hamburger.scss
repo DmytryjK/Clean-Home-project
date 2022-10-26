@@ -1,0 +1,51 @@
+.hamburger-menu {
+    position: relative;
+    visibility: hidden;
+    position: fixed;
+    background-color: $main-color;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    transition: 0.5s ease-in-out all;
+    &-active {
+        visibility: visible;
+        left: 0;
+        width: 100%;
+    }
+    &_list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        row-gap: 50px;
+    }
+    &_item {
+        width: 100%;
+    }
+    &_link {
+        display: block;
+        text-decoration: none;
+        font-size: 30px;
+        font-family: $font;
+        color: white;
+        transition: 0.3s all;
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        font-size: 36px;
+        color: white;
+        background-color: transparent;
+        border: none;
+    }
+}    
