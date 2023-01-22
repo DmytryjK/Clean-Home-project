@@ -1,5 +1,3 @@
-/*How To clean*/
-
 function navigate () {
 	const 	tabButton = document.querySelectorAll('.js-clean_btn'),
 		navigation = document.querySelector('.how-we-clean__navigation'),
@@ -37,7 +35,6 @@ function navigate () {
 
 	howToClean();
 }
-
 
 function howToClean() {
 	let btn = document.querySelectorAll('.image-button');

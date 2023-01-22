@@ -12,8 +12,6 @@ function validateForms(rules, messages, selector, popUpSelector, targetSelector)
         }
     });
 
-    
-
     new window.JustValidate(selector, {
         rules,
         messages,
@@ -37,10 +35,5 @@ function validateForms(rules, messages, selector, popUpSelector, targetSelector)
     	}
     })
 }
-// const inputPhoneNumber = document.querySelectorAll('.discount__phone-number'),
-// inputEmailFooter = document.querySelectorAll('.footer__social-block__input');
 
-// popUpWindow(event, popUpThanks, inputPhoneNumber, inputEmailFooter);
-
-// popUp.classList.remove('pop-up_active');
 export default validateForms;

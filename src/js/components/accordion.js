@@ -1,4 +1,3 @@
-/*Accordion*/
 function accordion() {
 	let btn = document.querySelectorAll('.about-us__accordion-btn');
 	btn.forEach((e) => {

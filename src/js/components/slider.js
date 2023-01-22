@@ -1,6 +1,3 @@
-/*Promo slider*/ 
-
-
 function slider() {
     const nextBtn = document.querySelector('.promotion__carousel__btn-next'),
 	  prevBtn = document.querySelector('.promotion__carousel__btn-prev'),
@@ -13,9 +10,7 @@ function slider() {
     let Circles;
     let counter = 0;
 
-
     checkWindowSize();
-
 
     const promoCircles = document.querySelectorAll('.promotion__circles-item');
 
@@ -25,6 +20,7 @@ function slider() {
         nextSlide();
         prevBtnStyle.style.stroke = '#151515';
         if (window.screen.width > 988) {
+
             if(counter >= images.length / 2) {
                 images.forEach(e => {
                     e.style.transform = 'translateX(0)';
@@ -32,9 +28,11 @@ function slider() {
                 counter = -1;
                 prevBtnStyle.style.stroke = '';
             } 
+
             counter ++;
             circles(counter);
         } else {
+
             if(counter > images.length / 2) {
                 images.forEach(e => {
                     e.style.transform = 'translateX(0)';
@@ -42,6 +40,7 @@ function slider() {
                 counter = -1;
                 prevBtnStyle.style.stroke = '';
             } 
+
             counter ++;
             circles(counter);
         }
@@ -61,6 +60,7 @@ function slider() {
         if (counter === 0) {
             prevBtnStyle.style.stroke = '#C3C3C3';
         }
+
         circles(counter);
     })
 
@@ -68,19 +68,24 @@ function slider() {
 
     function checkWindowSize() {
         if (window.screen.width > 988) {
+
             for (let i = 0; i < images.length - 1; i ++) {
                 Circles = promoCirclesBlock.appendChild(document.createElement('div'));
                 Circles.classList.add('promotion__circles-item');
             }
+
         } else {
+
             for (let i = 0; i < images.length; i ++) {
                 Circles = promoCirclesBlock.appendChild(document.createElement('div'));
                 Circles.classList.add('promotion__circles-item');
             }
+
         }
     }
 
     function circles(i) {
+        
         promoCircles.forEach(e => {
             e.classList.remove('active');
         });

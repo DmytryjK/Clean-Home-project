@@ -1,7 +1,7 @@
 import {userScrollbarWidth} from '../services/userScrollWidth/userScrollWidth';
 
 function hamburger() {
-    //hamburger menu
+
     const hamburger = document.querySelector('.header__hamburger-menu_icon'),
         hamburgerMenu = document.querySelector('.header__hamburger-menu_nav'),
         navigationLinks = document.querySelectorAll('.header__hamburger-menu_link'),
