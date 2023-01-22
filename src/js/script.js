@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			'.feedback-page__send-rightform', '.pop-up-thanks', '.feedback-page__submit-btn');
 		
 	} else {
-		console.log('yep')
+
 		navigate();
 		howToClean();
 		slider();
@@ -58,12 +58,3 @@ window.addEventListener('DOMContentLoaded', () => {
 			
 	}
 })
-
-
-
-
-
-
-
-
-

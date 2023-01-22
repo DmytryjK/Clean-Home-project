@@ -627,8 +627,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			'.feedback-page__send-rightform', '.pop-up-thanks', '.feedback-page__submit-btn');
 		
 	} else {
-		console.log('yep')
-		;(0,_components_howWeClean__WEBPACK_IMPORTED_MODULE_0__.navigate)();
+
+		(0,_components_howWeClean__WEBPACK_IMPORTED_MODULE_0__.navigate)();
 		(0,_components_howWeClean__WEBPACK_IMPORTED_MODULE_0__.howToClean)();
 		(0,_components_slider__WEBPACK_IMPORTED_MODULE_1__.slider)();
 		(0,_components_accordion__WEBPACK_IMPORTED_MODULE_2__.accordion)();
