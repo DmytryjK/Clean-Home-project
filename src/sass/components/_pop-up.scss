@@ -161,18 +161,32 @@
 
 .pop-up__close {
     position: absolute;
-    width: 35px;
-    height: 35px;
     top: 30px;
-    right: 30px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:after {
-        content: 'x';
+    &:after, &:before {
+        content: '';
+        position: relative;
         display: block;
-        font-size: 45px;
-        line-height: 0;
+        top: calc(50% - 2px);
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $main-color;
+        transition: 0.2s ease-in-out background-color;
     }
+    &:after {
+        transform: translateY(-1px) rotate(-45deg);
+    }
+    &:before {
+        transform: translateY(1px) rotate(45deg);
+    }
+    &:hover {
+        &:after, &:before {
+            background-color: red;
+        }
+    }
+
 }

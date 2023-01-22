@@ -601,6 +601,9 @@
             .footer__social-block__input {
                 margin-top: 30px;
             }
+            // .form-wrapper {
+            //     margin-top: 30px;
+            // }
             .btn-circle_opacity-footer {
                 right: -136px;
             }
@@ -752,10 +755,83 @@
         .header__link {
             margin: 0 auto;
         }
-        &__hamburger-menu {
+        .header__hamburger-menu {
             display: block;
+            order: -1;
+            align-self: center;
+            height: 25px;
         }
-    
+        .header__hamburger-menu_icon {   
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 25px;
+            width: 25px;
+            row-gap: 10px;
+            z-index: 999;
+            cursor: pointer;
+            span {
+                opacity: 1;
+                display: block;
+                width: 25px;
+                height: 1px;
+                background-color: $second-color;
+                transition: 0.3s ease-in-out all;
+            }
+            &-active {
+                span {
+                    background-color: white;
+                    &:first-child{
+                        transform: translateY(11px) rotate(-135deg);
+                    }
+                    &:last-child {
+                        transform: translateY(-11px) rotate(135deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .header__hamburger-menu_nav {
+            visibility: hidden;
+            position: fixed;
+            background-color: $main-color;
+            left: -100%;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            z-index: 100;
+            transition: 0.5s ease-in-out all;
+        }
+        .header__hamburger-menu_nav-active {
+            visibility: visible;
+            left: 0;
+            width: 100%;
+        }
+        .header__hamburger-menu_list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            row-gap: 50px;
+        }
+        .header__hamburger-menu_item {
+            width: 100%;
+        }
+        .header__hamburger-menu_link {
+            display: block;
+            text-decoration: none;
+            font-size: 30px;
+            font-family: $font;
+            color: white;
+            transition: 0.3s all;
+        }
     }
 }
 

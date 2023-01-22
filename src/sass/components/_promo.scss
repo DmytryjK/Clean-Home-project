@@ -1,14 +1,8 @@
 .promotion {
-	overflow: hidden;
 	margin-top: 180px; 
 	&__title {
 		@include font-title;
 		width: 703px;
-		opacity: 0;
-		visibility: hidden;
-		&_animation {
-			animation: move-text-promo 600ms ease-in-out forwards;
-		}
 	}
 	&__carousel {
 		margin-top: 80px;
@@ -62,9 +56,12 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			transition: 0.5s ease-in-out;
+			transition: 0.1s ease-in-out opacity, 0.3s ease-in-out transform;
 			margin-right: 30px;
 			cursor: pointer;
+			&:hover {
+				opacity: 0.8;
+			}
 		}
 		&-descr {
 			font-weight: 500;
@@ -82,27 +79,15 @@
 		}
 		&-item_bg1 {
 			background: url('../images/promo_armchair.png') center center/cover no-repeat;
-			&:hover {
-				opacity: 0.75;
-			}
 		}
 		&-item_bg2 {
 			background: url('../images/promo_second.png') center center/cover no-repeat;
-			&:hover {
-				opacity: 0.75;
-			}
 		}
 		&-item_bg3 {
 			background: url('../images/promo_generalClean.png') center center/cover no-repeat;
-			&:hover {
-				opacity: 0.75;
-			}
 		}
 		&-item_bg4 {
 			background: url('../images/promo_cleanOffice.png') center center/cover no-repeat;
-			&:hover {
-				opacity: 0.75;
-			}
 		}
 	}
 	&__circles {
@@ -131,17 +116,3 @@
 		}
 	}
 }
-
-@keyframes move-text-promo {
-	0% {
-		visibility: hidden;
-		transform: translateY(-100%);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-		visibility: visible;
-	}
-}
-

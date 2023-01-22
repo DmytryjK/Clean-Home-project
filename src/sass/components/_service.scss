@@ -1,13 +1,7 @@
 .services {
 	margin-top: 180px;
-	overflow: hidden;
 	&-title {
 		@include font-title;
-		visibility: hidden;
-		opacity: 0;
-		&_animation {
-			animation: move-text-services 600ms ease-in-out forwards;
-		}
 	}
 	&__grid-gallery {
 		margin-top: 115px;
@@ -17,14 +11,6 @@
 		grid-auto-rows: minmax(375px, 400px);
 		column-gap: 30px;
 		row-gap: 50px;
-		
-	}
-	&__item {
-		visibility: hidden;
-		opacity: 0;
-		&_animation {
-			animation: move-cards-services 600ms ease-in-out forwards 300ms;
-		}
 	}
 	&__item__text {
 		width: 252px;
@@ -90,31 +76,5 @@
 		line-height: 34px;
 		color: $main-color;
 		font-family: $font;
-	}
-}
-
-@keyframes move-text-services {
-	0% {
-		visibility: hidden;
-		transform: translateY(-100%);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-		visibility: visible;
-	}
-}
-
-@keyframes move-cards-services {
-	0% {
-		transform: translateX(-100%);
-		visibility: hidden;
-		opacity: 0;
-	}
-	100% {
-		transform: translateX(0);
-		opacity: 1;
-		visibility: visible;
 	}
 }

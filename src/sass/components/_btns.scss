@@ -1,6 +1,8 @@
 .btn__main {
 	width: 270px;
 	height: 70px;
+	left: 130px;
+	top: 878px;
 	background-color: $main-color;
 	border-radius: 20px;
 	border: none;
@@ -45,7 +47,7 @@
 	height: 55px;
 	border: 1px solid $main-color;
 	border-radius: 100%;
-	transition: 0.3s all;
+	transition: 0.2s all;
 	background-color: white;
 	&:hover{
 		border-radius: 100%;
@@ -65,6 +67,7 @@
 	}
 	path {
 		fill: $main-color;
+		transition: 0.2s ease-in-out fill;
 	}
 	&_bottom {
 		position: absolute;
@@ -80,6 +83,7 @@
 		background-color: $main-color;
 		path {
 			fill: white;
+			transition: 0.2s ease-in-out fill;
 		}
 		&:hover{
 			border-radius: 100%;
@@ -88,19 +92,6 @@
 			path {
 				fill: #4FB1A7;
 			}
-		}
-	}
-	&_opacity-footer {
-		position: absolute;
-		background-color: transparent;
-		border-color: white;
-		bottom: 0px;
-		right: -136px;
-		path {
-			fill: white;
-		}
-		&:hover {
-			border: $main-color;
 		}
 	}
 }
@@ -123,6 +114,11 @@
 
 //Abous us//
 .btn__main_mg-about {
+	margin-top: 50px;
+}
+
+//Discount//
+.btn__main_mg-discount {
 	margin-top: 50px;
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,36 +63,34 @@
 						<span></span>
 						<span></span>
 					</div>
+					<nav class="header__hamburger-menu_nav">
+						<ul class="header__hamburger-menu_list">
+							<li class="header__hamburger-menu_item">
+								<a href="#" class="header__hamburger-menu_link">
+									О компании
+								</a>
+							</li>
+							<li class="header__hamburger-menu_item">
+								<a href="#services" class="header__hamburger-menu_link">
+									Услуги и цены
+								</a>
+							</li>
+							<li class="header__hamburger-menu_item">
+								<a href="#feedback" class="header__hamburger-menu_link">
+									Отзывы
+								</a>
+							</li>
+							<li class="header__hamburger-menu_item">
+								<a href="#footer" class="header__hamburger-menu_link">
+									Контакты
+								</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
 	</header>
-
-	<nav class="hamburger-menu">
-		<ul class="hamburger-menu_list">
-			<li class="hamburger-menu_item">
-				<a href="#" class="hamburger-menu_link">
-					О компании
-				</a>
-			</li>
-			<li class="hamburger-menu_item">
-				<a href="#services" class="hamburger-menu_link">
-					Услуги и цены
-				</a>
-			</li>
-			<li class="hamburger-menu_item">
-				<a href="#feedback" class="hamburger-menu_link">
-					Отзывы
-				</a>
-			</li>
-			<li class="hamburger-menu_item">
-				<a href="#footer" class="hamburger-menu_link">
-					Контакты
-				</a>
-			</li>
-		</ul>
-		<button class="hamburger-menu__close">X</button>
-	</nav>
 
 	<section class="main__page">
 		<div class="container__img">
@@ -106,10 +104,10 @@
 							Оказываем клининговые услуги для разного вида помещений в любое удобное для Вас время
 						</p>
 						<div class="main__page-btn">
-							<button class="btn__main btn__main-margin main__page-btn-animation" data-name="main_send-request" data-popupname="send request">
+							<button class="btn__main btn__main-margin" data-name="main_send-request">
 								Оставить заявку
 							</button>
-							<button class="btn__opacity btn__opacity-margin main__page-btn-animation" data-name="main_connect_with_us" data-popupname="connect with us">
+							<button class="btn__opacity btn__opacity-margin" data-name="main_connect_with_us">
 								Связаться с нами
 							</button>
 						</div>
@@ -132,10 +130,10 @@
 				<img class="main__page-bg_adaptive" src="images/main_image.jpg" alt="main_bg">
 				<div class="container">	
 					<div class="main__page-btn">
-						<button class="btn__main btn__main-margin main__page-btn-animation" data-name="main_send-request_adapt" data-popupname="send request">
+						<button class="btn__main btn__main-margin" data-name="main_send-request_adapt">
 							Оставить заявку
 						</button>
-						<button class="btn__opacity btn__opacity-margin main__page-btn-animation" data-name="main_connect_with_us_adapt" data-popupname="connect with us">
+						<button class="btn__opacity btn__opacity-margin" data-name="main_connect_with_us_adapt">
 							Связаться с нами
 						</button>
 					</div>
@@ -192,12 +190,12 @@
 					на уборку</p>
 					<ul class="navigation navigation_mgt73">
 						<li class="navigation__item navigation__item-double_mod">
-							<a href="" class="navigation__link navigation__link-active js-prices-tab" data-id="subscribe">
+							<a href="" class="navigation__link js-prices-tab">
 								По подписке
 							</a>
 						</li>
 						<li class="navigation__item navigation__item-double_mod">
-							<a href="" class="navigation__link js-prices-tab" data-id="once">
+							<a href="" class="navigation__link js-prices-tab">
 								Разовая
 							</a>
 						</li>
@@ -205,7 +203,7 @@
 				</div>
 			</div>
 			<div class="prices__overflow">
-				<div class="prices__cards prices__cards-active" id="subscribe" data-popupname="send request">
+				<div class="prices__cards">
 					<div class="prices__cards-item">
 						<h3 class="prices__cards-title">1-комнатная</h3>
 						<p class="prices__cards-cost">от 800 грн</p>
@@ -228,7 +226,7 @@
 					</div>
 				</div>
 	
-				<div class="prices__cards" id="once" data-popupname="send request">
+				<div class="prices__cards">
 					<div class="prices__cards-item">
 						<h3 class="prices__cards-title">1-комнатная</h3>
 						<p class="prices__cards-cost">от 900 грн</p>
@@ -241,12 +239,12 @@
 					</div>
 					<div class="prices__cards-item">
 						<h3 class="prices__cards-title">3-комнатная</h3>
-						<p class="prices__cards-cost">от 1200 грн</p>
+						<p class="prices__cards-cost">от 1400 грн</p>
 						<p class="prices__cards-time">~ 5 часов</p>
 					</div>
 					<div class="prices__cards-item">
 						<h3 class="prices__cards-title">4-комнатная</h3>
-						<p class="prices__cards-cost">от 1500 грн</p>
+						<p class="prices__cards-cost">от 1700 грн</p>
 						<p class="prices__cards-time">~ 6 часов</p>
 					</div>
 				</div>
@@ -286,7 +284,6 @@
 			</ul>
 
 			<div class="how-we-clean__image">
-
 				<div class="how-we-clean__image-kitchen how-we-clean-active js__image" id="kitchen">
 					<div class="image__nav-block image__nav-block_kitchen1">
 						<p class="image-descr image-descr_kitchen1">
@@ -434,7 +431,7 @@
 		<div class="container">
 			<h2 class="services-title">Услуги и цены</h2>
 			<div class="services__grid-gallery">
-				<div class="services__item services__item__text">
+				<div class="services__item__text">
 					<h3 class="services__text-title">Генеральная уборка квартиры</h3>
 					<p class="services__text-descr">Глубокая уборка 
 					с ипользованием профессионального оборудования 
@@ -442,43 +439,43 @@
 					<div class="services__text-price">
 						от 800 грн
 					</div>
-					<button class="btn-circle btn-circle_bottom" data-name="servicesBtnNav" data-popupname="send request">
+					<button class="btn-circle btn-circle_bottom" data-name="servicesBtnNav">
 						<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 						</svg>
 					</button>
 				</div>
-				<div class="services__item services__item__image">
+				<div class="services__item__image">
 					<img src="images/main_clean.png" alt="main_clean">
 				</div>
-				<div class="services__item services__item__mix">
+				<div class="services__item__mix">
 					<img class="services__mix-image" src="images/support_clean.png" alt="support_clean">
 					<h3 class="services__mix-title">Поддерживающая уборка</h3>
 					<div class="services__mix-price">
 						от 500 грн
 					</div>
-					<button class="btn-circle btn-circle_bot-rght" data-name="servicesBtnNav" data-popupname="send request">
+					<button class="btn-circle btn-circle_bot-rght" data-name="servicesBtnNav">
 						<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 						</svg>
 					</button>
 				</div>
-				<div class="services__item services__item__mix">
+				<div class="services__item__mix">
 					<img class="services__mix-image" src="images/vacation_home_clean.png" alt="vacation_home_clean">
 					<h3 class="services__mix-title">Уборка загородных домов</h3>
 					<div class="services__mix-price">
 						от 1200 грн
 					</div>
-					<button class="btn-circle btn-circle_bot-rght" data-name="servicesBtnNav" data-popupname="send request">
+					<button class="btn-circle btn-circle_bot-rght" data-name="servicesBtnNav">
 						<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 						</svg>
 					</button>
 				</div>
-				<div class="services__item services__item__image">
+				<div class="services__item__image">
 					<img src="images/after_repair_clean.png" alt="after_repair_clean">
 				</div>
-				<div class="services__item services__item__text">
+				<div class="services__item__text">
 					<h3 class="services__text-title">Уборка после ремонта</h3>
 					<p class="services__text-descr">Глубокая уборка 
 					с использованием профессионального оборудования 
@@ -486,28 +483,28 @@
 					<div class="services__text-price">
 						от 2000 грн
 					</div>
-					<button class="btn-circle btn-circle_bottom" data-name="servicesBtnNav" data-popupname="send request">
+					<button class="btn-circle btn-circle_bottom" data-name="servicesBtnNav">
 						<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 						</svg>
 					</button>
 				</div>
-				<div class="services__item services__item__image">
+				<div class="services__item__image">
 					<img src="images/clean_office.png" alt="clean_office">
 				</div>
-				<div class="services__item services__item__text">
+				<div class="services__item__text">
 					<h3 class="services__text-title">Уборка офисных помещений</h3>
 					<p class="services__text-descr">Комплексная уборка ваших домов и офисов с ипользованием профессионального оборудования и химии</p>
 					<div class="services__text-price">
 						от 2000 грн
 					</div>
-					<button class="btn-circle btn-circle_bottom" data-name="servicesBtnNav" data-popupname="send request">
+					<button class="btn-circle btn-circle_bottom" data-name="servicesBtnNav">
 						<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 						</svg>
 					</button>
 				</div>
-				<div class="services__item services__item__text">
+				<div class="services__item__text">
 					<h3 class="services__text-title">Базовая уборка квартиры</h3>
 					<p class="services__text-descr">Комплексаная  уборка 
 					с использованием профессионального оборудования 
@@ -515,34 +512,34 @@
 					<div class="services__text-price">
 						от 5000 грн
 					</div>
-					<button class="btn-circle btn-circle_bottom" data-name="servicesBtnNav" data-popupname="send request">
+					<button class="btn-circle btn-circle_bottom" data-name="servicesBtnNav">
 						<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 						</svg>
 					</button>
 				</div>
-				<div class="services__item services__item__image">
+				<div class="services__item__image">
 					<img src="images/base_clean.png" alt="base_clean">
 				</div>
-				<div class="services__item services__item__mix">
+				<div class="services__item__mix">
 					<img class="services__mix-image" src="images/furniture_clean.png" alt="furniture_clean">
 					<h3 class="services__mix-title">Химчистка мебели</h3>
 					<div class="services__mix-price">
 						от 600 грн
 					</div>
-					<button class="btn-circle btn-circle_bot-rght" data-name="servicesBtnNav" data-popupname="send request">
+					<button class="btn-circle btn-circle_bot-rght" data-name="servicesBtnNav">
 						<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 						</svg>
 					</button>
 				</div>
-				<div class="services__item services__item__mix">
+				<div class="services__item__mix">
 					<img class="services__mix-image" src="images/carpet_clean.png" alt="carpet_clean">
 					<h3 class="services__mix-title">Химчистка ковров</h3>
 					<div class="services__mix-price">
 						от 500 грн
 					</div>
-					<button class="btn-circle btn-circle_bot-rght"data-name="servicesBtnNav" data-popupname="send request">
+					<button class="btn-circle btn-circle_bot-rght"data-name="servicesBtnNav">
 						<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 						</svg>
@@ -559,7 +556,7 @@
 			<div class="wrapper">
 				<div class="more-service__left">
 					<h2 class="more-service__title">Дополнительные клининговые услуги</h2>
-					<button class="more-service__btn btn__main btn__main-margin" data-name="moreServiceBtn" data-popupname="send request">Заказать уборку</button>
+					<button class="more-service__btn btn__main btn__main-margin" data-name="moreServiceBtn">Заказать уборку</button>
 				</div>
 				<table class="more-service__table">
 					<tr>
@@ -591,7 +588,7 @@
 						<td class="second-column">от 65 грн</td>
 					</tr>
 				</table>
-				<button class="more-service__btn-adaptation btn__main btn__main-margin" data-name="moreServiceBtn" data-popupname="send request">Заказать уборку</button>
+				<button class="more-service__btn-adaptation btn__main btn__main-margin" data-name="moreServiceBtn">Заказать уборку</button>
 			</div>
 		</div>
 	</section>
@@ -616,41 +613,41 @@
 				</div>
 				
 				<div class="promotion__carousel-wrapper">
-					<div class="promotion__carousel-item promotion__carousel-item_bg1" data-popupname="send request">
+					<div class="promotion__carousel-item promotion__carousel-item_bg1">
 						<p class="promotion__carousel-descr">
 							Только весной при заказе уборки квартиры химчистки дивана или кресла в подарок
 						</p>
-						<button class="btn-circle btn-circle_white" data-name="promotionBtnNav" data-popupname="send request">
+						<button class="btn-circle btn-circle_white" data-name="promotionBtnNav">
 							<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 							</svg>
 						</button>
 					</div>
-					<div class="promotion__carousel-item promotion__carousel-item_bg2" data-popupname="send request">
+					<div class="promotion__carousel-item promotion__carousel-item_bg2">
 						<p class="promotion__carousel-descr">
 							Только весной при заказе уборки квартиры химчистки дивана или кресла в подарок
 						</p>
-						<button class="btn-circle btn-circle_white" data-name="promotionBtnNav" data-popupname="send request">
+						<button class="btn-circle btn-circle_white" data-name="promotionBtnNav">
 							<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 							</svg>
 						</button>
 					</div>
-					<div class="promotion__carousel-item promotion__carousel-item_bg3" data-popupname="send request">
+					<div class="promotion__carousel-item promotion__carousel-item_bg3">
 						<p class="promotion__carousel-descr">
 							Только весной при заказе уборки квартиры химчистки дивана или кресла в подарок
 						</p>
-						<button class="btn-circle btn-circle_white" data-name="promotionBtnNav" data-popupname="send request">
+						<button class="btn-circle btn-circle_white" data-name="promotionBtnNav">
 							<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 							</svg>
 						</button>
 					</div>
-					<div class="promotion__carousel-item promotion__carousel-item_bg4" data-popupname="send request">
+					<div class="promotion__carousel-item promotion__carousel-item_bg4">
 						<p class="promotion__carousel-descr">
 							Только весной при заказе уборки квартиры химчистки дивана или кресла в подарок
 						</p>
-						<button class="btn-circle btn-circle_white" data-name="promotionBtnNav" data-popupname="send request">
+						<button class="btn-circle btn-circle_white" data-name="promotionBtnNav">
 							<svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464465C12.9763 0.269203 12.6597 0.269203 12.4645 0.464465C12.2692 0.659727 12.2692 0.97631 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.73079 12.9763 7.73079 13.1716 7.53553L16.3536 4.35355ZM4.37114e-08 4.5L16 4.5L16 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#49A399"/>
 							</svg>
@@ -673,7 +670,7 @@
 					<p class="about-us__descr">
 						Остались вопросы? Можете задать их нам и мы ответим в ближайшее время
 					</p>
-					<button class="about-us__btn btn__main btn__main_mg-about" data-name="send-a-question" data-popupname="connect with us">
+					<button class="about-us__btn btn__main btn__main_mg-about" data-name="send-a-question">
 						Задать вопрос
 					</button>
 				</div>
@@ -731,7 +728,7 @@
 						Не обязательно. Вы можете заняться своими делами, пока мы наводим у вас порядок. 
 					</div>
 				</div>
-				<button class="about-us__btn about-us__adaptation-btn btn__main btn__main_mg-about" data-name="send-a-question" data-popupname="connect with us">
+				<button class="about-us__adaptation-btn btn__main btn__main_mg-about" data-name="send-a-question">
 					Задать вопрос
 				</button>
 			</div>
@@ -761,7 +758,7 @@
 						</p>
 						<form action="" method="" class="discount__form" id = "discount_phone">
 							<input class="discount__phone-number" type="tel" name="tel" placeholder="+38 (0__) ___-__-__" data-validate-field="tel" id = "discount__phone-number">
-							<input class="discount__submit-btn input-submit" type="submit" value="Заказать уборку">
+							<input class="discount__submit-btn btn__main btn__main_mg-discount" type="submit" value="Заказать уборку">
 						</form>
 					</div>
 				</div>
@@ -781,7 +778,7 @@
 					</p>
 					<form action="" method="" class="discount__form-adapt" id = "discount_phone">
 						<input class="discount__phone-number" type="tel" name="tel" placeholder="+38 (0__) ___-__-__" data-validate-field="tel" id = "discount__phone-number">
-						<input class="discount__submit-btn btn__main btn__main_mg-discount" type="submit" value="Заказать уборку" data-popupname="thanks for request">
+						<input class="discount__submit-btn btn__main btn__main_mg-discount" type="submit" value="Заказать уборку">
 					</form>
 				</div>
 			</div>
@@ -834,7 +831,7 @@
 		</div>
 	</section>
 
-	<section class="pop-up-main" data-popup="send request">
+	<section class="pop-up-main">
 		<div class="container">
 			<div class="pop-up-main__wrapper">
 				<h2 class="pop-up-main__header">Ваши данные</h2>
@@ -850,7 +847,7 @@
 		</div>
 	</section>
 
-	<section class="pop-up-main pop-up-connectWithUs" data-popup="connect with us">
+	<section class="pop-up-main pop-up-connectWithUs">
 		<div class="container">
 			<div class="pop-up-connectWithUs__wrapper">
 				<h2 class="pop-up-connectWithUs__header">Свяжитесь с менеджером и он ответит на все Ваши вопросы</h2>
@@ -900,7 +897,7 @@
 		</div>
 	</section>
 
-	<section class="pop-up-main pop-up-thanks" data-popup="thanks for request">
+	<section class="pop-up-main pop-up-thanks">
 		<div class="container">
 			<div class="pop-up-main__wrapper">
 				<h2 class="pop-up-main__header">Спасибо, наши специалисты обязательно с Вами свяжутся в ближайшее время!</h2>
@@ -1061,7 +1058,11 @@
 		</div>
 	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
 	<script src="js/just-validate.min.js"></script>
+	<script src="js/inputmask.min.js"></script>
 	<script src="js/bundle.js"></script>
 </body>
 </html>

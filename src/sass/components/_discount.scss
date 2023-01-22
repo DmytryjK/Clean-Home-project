@@ -11,45 +11,16 @@
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%);
-		visibility: hidden;
-		opacity: 0;
-		&_animation {
-			animation: move-bg-discount 700ms ease-in-out forwards;
-		}
 	}
 	&__text-block {
 		max-width: 694px;
 	}
 	&__title {
 		@include font-title;
-		visibility: hidden;
-		opacity: 0;
-		&_animation {
-			animation: move-text-discount 500ms ease-in-out forwards
-		}
 	}
 	&__descr {
 		@include font-descr;
 		margin-top: 50px;
-		visibility: hidden;
-		opacity: 0;
-		&_animation {
-			animation: move-text-discount 500ms ease-in-out forwards 200ms;
-		}
-	}
-	&__form {
-		visibility: hidden;
-		opacity: 0;
-		&_animation {
-			animation: move-form-discount 500ms ease-in-out forwards 200ms;
-		}
-	}
-	&__form-adapt {
-		visibility: hidden;
-		opacity: 0;
-		&_animation {
-			animation: move-form-discount 500ms ease-in-out forwards 200ms;
-		}
 	}
 	&__phone-number {
 		display: block;
@@ -72,39 +43,5 @@
 	}
 	.wrapper__adaptive {
 		display: none;
-	}
-}
-
-@keyframes move-text-discount {
-	0% {
-		transform: translateY(-50%);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-		visibility: visible;
-	}
-}
-
-@keyframes move-bg-discount {
-	0% {
-		visibility: hidden;
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-		visibility: visible;
-	}
-}
-
-@keyframes move-form-discount {
-	0% {
-		opacity: 0;
-		visibility: hidden;
-	}
-	100% {
-		opacity: 1;
-		visibility: visible;
 	}
 }

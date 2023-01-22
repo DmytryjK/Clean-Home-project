@@ -33,11 +33,12 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			transition: 0.2s ease-in-out border-color;
 			&:not(:last-child) {
 				margin-right: 35px;
 			}
 			&:hover {
-				border: none;
+				border-color: $main-color;
 			}
 		}
 		&__link {
@@ -72,6 +73,11 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			.form-wrapper {
+				// height: 55px;
+				margin-top: 80px;
+				position: relative;
+			}
 		}
 		&__subscribe {
 			margin-top: 304px;
@@ -83,9 +89,11 @@
 			color: #FFFFFF;
 		}
 		&__input {
+			position: relative;
 			margin-top: 80px;
 			border: none;
-			height: 40px;
+			height: 55px;
+			width: 100%;
 			border-bottom: 1px solid white;
 			background-color: transparent;
 			font-family: $font;
@@ -99,16 +107,23 @@
 			}
 		}
 	}
+
 	.btn-circle_opacity-footer {
+		position: absolute;
+		background-color: transparent;
+		border-color: white;
+		bottom: 0px;
+		right: -136px;
 		background: url('../../icons/btn_arrow-white.svg') center no-repeat;
 		position: absolute;
 		width: 55px;
 		height: 55px;
 		display: block;
 		outline: none;
-		border: none;
+		border: 1px solid transparent;
 		transition: 0.3s all;
 		border-radius: 100%;
+		transition: 0.2s ease-in-out all;
 		&:hover {
 			background-color: $main-color;
 			border-radius: 100%;
@@ -139,7 +154,7 @@
 			font-size: 20px;
 			line-height: 27px;
 			color: #FFFFFF;
-			transition: 0.3s all;
+			transition: 0.2s all;
 			&:hover {
 				color: #4FB1A7;
 			}
@@ -173,11 +188,10 @@
 	&__arrow-up {
 		a {
 			position: absolute;
-			right: 0px;
+			right: 0;
 			bottom: 0;
-			width: 50px;
+			width: 25px;
 			text-align: center;
-			animation: arrow-animate 900ms ease-in-out infinite;
 		}
 		a:hover {
 			path {
@@ -191,19 +205,5 @@
 	}
 	.footer__social-block__subscribe_adaptive {
 		display: none;
-	}
-}
-
-@keyframes arrow-animate {
-	0% {
-		bottom: 10px
-	}
-
-	50% {
-		bottom: 0px
-	}
-
-	100% {
-		bottom: 10px
 	}
 }

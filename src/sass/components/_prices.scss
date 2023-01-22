@@ -3,11 +3,6 @@
 	&-title {
 		@include font-title;
 		width: 510px;
-		visibility: hidden;
-		opacity: 0;
-		&_animation {
-			animation: move-text-prices 600ms ease-in-out forwards;
-		}
 	}
 	&__subscribe {
 		width: 570px;
@@ -17,7 +12,6 @@
 		}
 	}
 	.wrapper {
-		overflow: hidden;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -36,7 +30,7 @@
 		flex-wrap: wrap;
 		padding-top: 38px;
 		padding-bottom: 38px;
-		transition: 0.5s ease-in-out all;
+		transition: 0.3s ease-in-out all;
 		transition-delay: 0.1s;
 		opacity: 0;
 		transform: scale(0);
@@ -53,17 +47,15 @@
 			flex-direction: column;
 			justify-content: center;
 			cursor: pointer;
-			transition: 0.5s ease-in-out all;
 			color: $second-color;
-			visibility: hidden;
-			opacity: 0;
+			transition: 0.2s ease-in-out all;
 			&:hover {
 				background-color: $main-color;
 				color: white; 
 				box-shadow: (5px 5px 30px $main-color);
-			}
-			&_animation {
-				animation: move-cards-prices 600ms ease-in-out forwards 300ms;
+				.prices__cards-time:before {
+					background: url('../../icons/ClockClockwise_hwr.svg');
+				}
 			}
 		}
 		&-title {
@@ -100,33 +92,8 @@
 				top: 50%;
 				transform: translateY(-50%);
 				left: 65px;
+				transition: 0.2s ease-in-out background-image;
 			}
 		}
-	}
-}
-
-@keyframes move-text-prices {
-	0% {
-		visibility: hidden;
-		transform: translateY(-100%);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-		visibility: visible;
-	}
-}
-
-@keyframes move-cards-prices {
-	0% {
-		visibility: hidden;
-		opacity: 0;
-		transform: scale(0.5);
-	}
-	100% {
-		opacity: 1;
-		visibility: visible;
-		transform: scale(1);
 	}
 }

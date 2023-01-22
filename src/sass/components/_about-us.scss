@@ -1,37 +1,19 @@
 .about-us {
-	// overflow: hidden;
 	margin-top: 180px;
 	&__left-side {
 		max-width: 566px;
 	}
 	&__title {
 		@include font-title;
-		opacity: 0;
-		visibility: hidden;
-		&_animation {
-			animation: move-text-aboutus 500ms ease-in-out forwards;
-		}
 	}
 	&__descr {
 		@include font-descr;
 		margin-top: 50px;
-		opacity: 0;
-		visibility: hidden;
-		&_animation {
-			animation: move-text-aboutus 500ms ease-in-out forwards 200ms;
-		}
 	}
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
 		column-gap: 55px;
-	}
-	&__btn {
-		opacity: 0;
-		visibility: hidden;
-		&_animation {
-			animation: move-buttons-aboutus 500ms ease-in-out forwards 200ms
-		}
 	}
 	&__accordion {
 		margin-top: 45px;
@@ -64,10 +46,11 @@
 				font-weight: 400;
 				line-height: 1px;
 				top: 50%;
-				transform: translateY(-50%);
+				// transform: translateY(-50%);
 				right: 7px;
 				color: $main-color;
 				cursor: pointer;
+				transition: 0.2s ease-in-out transform;
 			}
 		}
 		&-text {
@@ -86,7 +69,7 @@
 
 .about-us__accordion-btn_active {
 	&:after {
-	content: '\2212';	
+		transform: rotate(-135deg);
 	}
 }
 
@@ -96,29 +79,4 @@
 
 .about-us__adaptation-btn {
 	display: none;
-}
-
-@keyframes move-text-aboutus {
-	0% {
-		visibility: hidden;
-		transform: translateY(-50%);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-		visibility: visible;
-	}
-}
-
-
-@keyframes move-buttons-aboutus {
-	0% {
-		opacity: 0;
-		visibility: hidden;
-	}
-	100% {
-		opacity: 1;
-		visibility: visible;
-	}
 }
