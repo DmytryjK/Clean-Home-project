@@ -7,6 +7,7 @@
 		right: 0;
 		max-width: 847px;
 		z-index: -1;
+		animation: move-bg 1000ms ease-in-out forwards;
 	}
 	&-inner {
 		width: 701px;
@@ -16,6 +17,8 @@
 			margin-top: 50px;
 			width: 600px;
 			@include font-descr;
+			visibility: hidden;
+			animation: move-text 400ms ease-in-out 500ms forwards;
 		}
 		&__title {
 			color: $main-color;
@@ -23,6 +26,8 @@
 			font-weight: 700;
 			font-size: 70px;
 			line-height: 109px;
+			visibility: hidden;
+			animation: move-text 700ms ease-in-out forwards;
 			span {
 				color: $second-color;
 			}
@@ -30,5 +35,45 @@
 	}
 	.main__page_adaptive {
 		display: none;
+		animation: move-bg 1000ms ease-in-out forwards;
+	}
+	&-btn-animation {
+		visibility: hidden;
+		opacity: 0;
+		animation: move-buttons 700ms ease-in-out forwards 500ms;
+	}
+}
+
+@keyframes move-text {
+	0% {
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes move-bg {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes move-buttons {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
 	}
 }

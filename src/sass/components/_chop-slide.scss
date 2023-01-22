@@ -16,10 +16,28 @@
 		color: #FFFFFF;
 		max-width: 1219px;
 		margin: 0 auto;
+		visibility: hidden;
+		opacity: 0;
+		&_animation {
+			animation: move-text-chopslide 500ms ease-in-out forwards;
+		}
 	}
 	&__img {
 		position: absolute;
 		bottom: 62px;
 		right: 75px;
+	}
+}
+
+@keyframes move-text-chopslide {
+	0% {
+		visibility: hidden;
+		transform: translateX(-50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
 	}
 }

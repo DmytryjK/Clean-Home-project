@@ -10,12 +10,22 @@
 	&__title {
 		@include font-title;
 		padding-right: 170px;
+		opacity: 0;
+		visibility: hidden;
+		&_animation {
+			animation: move-text-feedback 500ms ease-in-out forwards;
+		}
 	}
 	&__descr {
 		@include font-descr;
 		margin-top: 50px;
 		max-width: 510px;
 		padding-right: 70px;
+		opacity: 0;
+		visibility: hidden;
+		&_animation {
+			animation: move-text-feedback 500ms ease-in-out forwards;
+		}
 	}
 	&__form {
 		width: 701px;
@@ -26,6 +36,11 @@
 			border: 1px solid $main-color;
 			min-height: 200px;
 			padding: 40px 40px 95px 40px;
+			opacity: 0;
+			visibility: hidden;
+			&_animation {
+				animation: move-item-feedback 500ms ease-in-out forwards 200ms;
+			}
 			&:nth-child(n+2) {
 				margin-top: 15px;
 			}
@@ -75,6 +90,11 @@
 		text-decoration: none;
 		color: white;
 		transition: 0.3s all;
+		opacity: 0;
+		visibility: hidden;
+		&_animation {
+			animation: move-btn-feedback 500ms ease-in-out forwards 200ms;
+		}
 		&:hover {
 			color: white;
 			background: #4FB1A7;
@@ -93,9 +113,50 @@
 		text-decoration: none;
 		color: $main-color;
 		transition: 0.3s all;
+		opacity: 0;
+		visibility: hidden;
+		&_animation {
+			animation: move-btn-feedback 500ms ease-in-out forwards 200ms;
+		}
 		&:hover {
 			color: white;
 			background: #4FB1A7;
 		}
+	}
+}
+
+@keyframes move-text-feedback {
+	0% {
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes move-item-feedback {
+	0% {
+		transform: translateX(50%);
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes move-btn-feedback {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
 	}
 }

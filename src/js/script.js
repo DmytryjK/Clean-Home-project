@@ -1,10 +1,11 @@
-import { navigate, howToClean } from './components/howWeClean';
+import { howToCleanCircle } from './components/howWeCleanCircle';
 import { slider } from './components/slider';
 import { accordion } from './components/accordion';
 import validateForms from './components/formValidation';
 import tabs from './components/tabs';
 import hamburger from './components/hamburger';
 import Popup from './components/popup';
+import initSiteAnimations from './components/initAnimations';
 
 const pageName = window.location.pathname.split('/').pop();
 
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	//General scripts
 	hamburger();
+	initSiteAnimations();
 
 	//Footer validation email
 	validateForms({ email: { required: true, email: true } }, { email: { email: 'Введите почту формата: example@mail.com' } }, '.footer__social-block__form', '.pop-up-thanks', '.btn-circle_opacity-footer');
@@ -25,22 +27,23 @@ window.addEventListener('DOMContentLoaded', () => {
 		
 	} else {
 
-		navigate();
-		howToClean();
+		howToCleanCircle();
 		slider();
 		accordion();
-		tabs();
+		
+		tabs('.js-prices-tab', '.prices__cards', 'prices__cards-active', 'navigation__link-active');
+		tabs('.js-clean_btn', '.js__image', 'how-we-clean-active', 'navigation__link-active');
 
 		//Popup(modalWindowSelector, targetSelector)
-		const sendRequestModal = new Popup('.pop-up-main', '[data-name="main_send-request"]').render();
-		const sendRequestModalAdapt = new Popup('.pop-up-main', '[data-name="main_send-request_adapt"]').render();
-		const connectModal = new Popup('.pop-up-connectWithUs', '[data-name="main_connect_with_us"]').render();
-		const connectModalAdapt = new Popup('.pop-up-connectWithUs', '[data-name="main_connect_with_us_adapt"]').render();
-		const pricesCards = new Popup('.pop-up-main', '.prices__cards-item').render();
-		const moreServiceBtn = new Popup('.pop-up-main', '[data-name="moreServiceBtn"]').render();
-		const servicesBtnNav = new Popup('.pop-up-main', '[data-name="servicesBtnNav"]').render();
-		const carouselItem = new Popup('.pop-up-main', '.promotion__carousel-item').render();
-		const sendAquestion = new Popup('.pop-up-connectWithUs', '[data-name="send-a-question"]').render();
+		new Popup('.pop-up-main', '[data-name="main_send-request"]').render();
+		new Popup('.pop-up-main', '[data-name="main_send-request_adapt"]').render();
+		new Popup('.pop-up-connectWithUs', '[data-name="main_connect_with_us"]').render();
+		new Popup('.pop-up-connectWithUs', '[data-name="main_connect_with_us_adapt"]').render();
+		new Popup('.pop-up-main', '.prices__cards-item').render();
+		new Popup('.pop-up-main', '[data-name="moreServiceBtn"]').render();
+		new Popup('.pop-up-main', '[data-name="servicesBtnNav"]').render();
+		new Popup('.pop-up-main', '.promotion__carousel-item').render();
+		new Popup('.pop-up-connectWithUs', '[data-name="send-a-question"]').render();
 
 		// validations
 		validateForms(

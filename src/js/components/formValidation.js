@@ -16,7 +16,6 @@ function validateForms(rules, messages, selector, popUpSelector, targetSelector)
         rules,
         messages,
         submitHandler: () => {
-            console.log('handle');
             const currentForm = document.querySelector(selector), 
                   currentFormList = Array.from(currentForm.children);
             const modalWindow = currentForm.closest('section');
@@ -31,7 +30,7 @@ function validateForms(rules, messages, selector, popUpSelector, targetSelector)
                 }
             })
 
-            const popup = new popUpWindowClass(popUpSelector, targetSelector).popUpOpen();
+            new popUpWindowClass(popUpSelector, targetSelector).popUpOpen();
     	}
     })
 }
