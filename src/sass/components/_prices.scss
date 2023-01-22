@@ -54,7 +54,7 @@
 				color: white; 
 				box-shadow: (5px 5px 30px $main-color);
 				.prices__cards-time:before {
-					background: url('../../icons/ClockClockwise_hwr.svg');
+					background: url('./../icons/ClockClockwise_hwr.svg');
 				}
 			}
 		}
@@ -86,7 +86,7 @@
 				position: absolute;
 				content: '';
 				display: block;
-				background: url('../../icons/ClockClockwise.svg');
+				background: url('./../icons/ClockClockwise.svg');
 				width: 27px;
 				height: 27px;
 				top: 50%;
